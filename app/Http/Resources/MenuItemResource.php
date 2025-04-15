@@ -18,7 +18,7 @@ class MenuItemResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'description' => $this->description,
-            'price' => $this->price,
+            'price' => (float) $this->price,
             'image' => $this->image,
             'tag' => $this->tag,
             'category' => $this->category?->name,
@@ -27,8 +27,8 @@ class MenuItemResource extends JsonResource
 
         // Check from discount
         if ($this->discount) {
-            $item['originalPrice'] = $this->price;
-            $item['price'] = max(0, $this->price - $this->discount->amount);
+            $item['originalPrice'] = (float) $this->price;
+            $item['price'] = (float) max(0, $this->price - $this->discount->amount);
         }
 
         return $item;
