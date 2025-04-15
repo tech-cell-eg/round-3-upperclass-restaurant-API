@@ -18,6 +18,11 @@ return new class extends Migration
             $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
+
+        // Add forign key constraint to menu_items table
+        Schema::table('menu_items', function (Blueprint $table) {
+            $table->foreignId('discount_id')->nullable()->constrained()->onDelete('set null');
+        });
     }
 
     /**
@@ -25,6 +30,9 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::table('menu_items', function (Blueprint $table) {
+            $table->dropForeign(['discount_id']);
+        });
         Schema::dropIfExists('discounts');
     }
 };
