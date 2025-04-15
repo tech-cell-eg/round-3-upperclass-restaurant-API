@@ -4,9 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Discount;
-use App\Models\Ingredient;
 use App\Models\MenuItem;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class MenuItemSeeder extends Seeder

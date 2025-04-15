@@ -14,23 +14,26 @@ class MenuItemResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
+        $price = $this->price;
+        $discountAmount = $this->discount?->amount ?? 0;
+        $finalPrice = max(0, $price - $discountAmount);
+    
         $item = [
             'id' => $this->id,
             'name' => $this->name,
             'description' => $this->description,
-            'price' => (float) $this->price,
+            'price' => round($finalPrice, 3),
             'image' => $this->image,
             'tag' => $this->tag,
             'category' => $this->category?->name,
-            'highlight' => (bool) $this->tag ? true : false
+            'highlight' => (bool) $this->tag,
         ];
-
-        // Check from discount
+    
         if ($this->discount) {
-            $item['originalPrice'] = (float) $this->price;
-            $item['price'] = (float) max(0, $this->price - $this->discount->amount);
+            $item['originalPrice'] = round($price, 3);
         }
-
+    
         return $item;
     }
+    
 }
