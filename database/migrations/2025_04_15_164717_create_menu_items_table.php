@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('price');
             $table->string('img_url');
             $table->string('type');
+            $table->foreignId('discount_id')->nullable()->constrained()->onDelete('set null');
             $table->timestamps();
         });
     }
