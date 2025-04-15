@@ -2,29 +2,29 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class MenuItem extends Model
 {
+    use HasFactory;
+
     protected $table = 'menu_items';
 
     protected $fillable = [
-        'title',
+        'name',
+        'description',
         'price',
-        'img_url',
-        'type',
+        'image',
+        'tag',
+        'category_id',
+        'discount_id',
     ];
-
-    public function ingredients(): BelongsToMany
-    {
-        return $this->belongsToMany(ingredient::class, 'menu_item_ingredients');
-    }
 
     public function category(): BelongsTo
     {
-        return $this->belongsTo(category::class);
+        return $this->belongsTo(Category::class);
     }
 
     public function discount(): BelongsTo

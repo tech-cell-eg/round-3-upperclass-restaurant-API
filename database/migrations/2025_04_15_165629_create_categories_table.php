@@ -16,6 +16,11 @@ return new class extends Migration
             $table->string('name');
             $table->timestamps();
         });
+
+        // Add forign key constraint to menu_items table
+        Schema::table('menu_items', function (Blueprint $table) {
+            $table->foreignId('category_id')->nullable()->constrained()->onDelete('set null');
+        });
     }
 
     /**
@@ -23,6 +28,9 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::table('menu_items', function (Blueprint $table) {
+            $table->dropForeign(['category_id']);
+        });
         Schema::dropIfExists('categories');
     }
 };
