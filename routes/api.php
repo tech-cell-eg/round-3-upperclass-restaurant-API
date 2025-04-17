@@ -4,7 +4,6 @@ use App\Http\Controllers\Api\BookingController;
 use App\Http\Controllers\Api\CookingClassesController;
 use App\Http\Controllers\Api\PostController;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\GiftCardsController;
 use App\Http\Controllers\Api\MenuItemsController;
 use App\Http\Controllers\Api\GetInTouchController;
