@@ -25,6 +25,9 @@ class DatabaseSeeder extends Seeder
             TeacherSeeder::class,
             ClassSeeder::class,
             PostSeeder::class,
+            MenuItemSeeder::class,
+            GiftCardSeeder::class,
+            GetInTouchSeeder::class
         ]);
     }
 }
