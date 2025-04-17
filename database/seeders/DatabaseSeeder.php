@@ -22,6 +22,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             SettingsTableSeeder::class,
+            TeacherSeeder::class,
+            ClassSeeder::class,
         ]);
     }
 }
