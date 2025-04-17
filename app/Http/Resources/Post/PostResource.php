@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Resources\Class;
+namespace App\Http\Resources\Post;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Facades\Storage;
 
-class ClassesResource extends JsonResource
+class PostResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -19,8 +19,9 @@ class ClassesResource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'sub_title' => $this->sub_title,
-            'image' => $this->image ? url(Storage::url('classes/' . $this->image)) : null,
+            'image' => $this->image ? url(Storage::url('posts/' . $this->image)) : null,
             'date' => $this->date,
+            'description' => $this->description,
         ];
     }
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\BookingController;
 use App\Http\Controllers\Api\CookingClassesController;
+use App\Http\Controllers\Api\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -11,3 +12,6 @@ Route::post('/tables/delete', [BookingController::class, 'unBookTable']);
 
 Route::get('/classes', [CookingClassesController::class, 'index']);
 Route::get('/class/{id}', [CookingClassesController::class, 'classDetails']);
+
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/post/{id}', [PostController::class, 'postDetails']);
