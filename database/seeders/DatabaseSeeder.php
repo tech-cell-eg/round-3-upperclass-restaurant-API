@@ -21,6 +21,10 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
+            SettingsTableSeeder::class,
+            TeacherSeeder::class,
+            ClassSeeder::class,
+            PostSeeder::class,
             MenuItemSeeder::class,
             GiftCardSeeder::class,
             GetInTouchSeeder::class
