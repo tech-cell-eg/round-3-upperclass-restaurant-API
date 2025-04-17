@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\GiftCard;
 use App\Models\GiftCardDetail;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class GiftCardSeeder extends Seeder
@@ -28,7 +27,7 @@ class GiftCardSeeder extends Seeder
             [
                 'title' => 'Gift Card Standard',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit eo ut vitae neque sed sed sit sagittis tristique scelerisque.',
-                'price' => 15.00,
+                'price' => 30.00,
                 'image' => 'https://cdn.prod.website-files.com/6321d0d284b5b793a257fad7/6325e0c0fed41fc9e8eba3d5_product-gift-card-standard-thumbnail-p-500.webp',
                 'details' => [
                     "Congue eu consequat ac felis donec et. Feugiat vivamus at augue eget arcu dictum. Scelerisque felis imperdiet proin fermentum leo vel orci. Auctor urna nunc id cursus metus aliquam eleifend mi.",
@@ -38,7 +37,7 @@ class GiftCardSeeder extends Seeder
             [
                 'title' => 'Gift Card Premium',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit eo ut vitae neque sed sed sit sagittis tristique scelerisque.',
-                'price' => 15.00,
+                'price' => 50.00,
                 'image' => 'https://cdn.prod.website-files.com/6321d0d284b5b793a257fad7/6325e07e7e7563bf1db00af2_product-gift-card-premium-thumbnail-p-500.webp',
                 'details' => [
                     "Congue eu consequat ac felis donec et. Feugiat vivamus at augue eget arcu dictum. Scelerisque felis imperdiet proin fermentum leo vel orci. Auctor urna nunc id cursus metus aliquam eleifend mi.",
@@ -48,7 +47,7 @@ class GiftCardSeeder extends Seeder
             [
                 'title' => 'Gift Card Gold',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit eo ut vitae neque sed sed sit sagittis tristique scelerisque.',
-                'price' => 15.00,
+                'price' => 100.00,
                 'image' => 'https://cdn.prod.website-files.com/6321d0d284b5b793a257fad7/6325e0913009595d2623f575_product-gift-card-gold-thumbnail-p-500.webp',
                 'details' => [
                     "Congue eu consequat ac felis donec et. Feugiat vivamus at augue eget arcu dictum. Scelerisque felis imperdiet proin fermentum leo vel orci. Auctor urna nunc id cursus metus aliquam eleifend mi.",
