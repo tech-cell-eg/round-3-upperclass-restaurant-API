@@ -28,7 +28,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $exceptions->renderable(function (NotFoundHttpException $e, $request) {
             return response()->json([
                 'status' => false,
-                'message' => 'Endpoint not found',
+                'message' => 'Resource not found',
                 'data' => null
             ], 404);
         });

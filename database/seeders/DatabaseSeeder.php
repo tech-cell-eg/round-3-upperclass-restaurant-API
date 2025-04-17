@@ -22,7 +22,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             MenuItemSeeder::class,
-            GiftCardSeeder::class
+            GiftCardSeeder::class,
+            GetInTouchSeeder::class
         ]);
     }
 }
