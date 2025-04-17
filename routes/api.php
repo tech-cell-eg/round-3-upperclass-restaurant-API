@@ -11,7 +11,7 @@ Route::post('/tables/create', [BookingController::class, 'bookTable']);
 Route::post('/tables/delete', [BookingController::class, 'unBookTable']);
 
 Route::get('/classes', [CookingClassesController::class, 'index']);
-Route::get('/class/{id}', [CookingClassesController::class, 'classDetails']);
+Route::get('/classes/{id}', [CookingClassesController::class, 'classDetails']);
 
 Route::get('/posts', [PostController::class, 'index']);
-Route::get('/post/{id}', [PostController::class, 'postDetails']);
+Route::get('/posts/{id}', [PostController::class, 'postDetails']);
