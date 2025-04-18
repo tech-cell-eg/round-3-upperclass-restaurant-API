@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('gift_card_id')->constrained('gift_card')->onDelete('cascade');
             $table->text('detail');
             $table->timestamps();
-        });        
+        });
     }
 
     /**

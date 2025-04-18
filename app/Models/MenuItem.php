@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\Storage;
 
 class MenuItem extends Model
 {
@@ -21,6 +22,15 @@ class MenuItem extends Model
         'category_id',
         'discount_id',
     ];
+
+    protected static function booted()
+    {
+        static::deleted(function ($cookingClass) {
+            if ($cookingClass->image) {
+                Storage::disk('public')->delete($cookingClass->image);
+            }
+        });
+    }
 
     public function category(): BelongsTo
     {
