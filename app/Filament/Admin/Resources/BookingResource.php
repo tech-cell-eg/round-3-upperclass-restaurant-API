@@ -18,6 +18,7 @@ use Filament\Forms\Components\TimePicker;
 class BookingResource extends Resource
 {
     protected static ?string $model = Booking::class;
+    protected static ?string $navigationGroup = 'Restaurant Management';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 

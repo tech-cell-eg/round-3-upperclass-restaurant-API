@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class GetInTouchResource extends Resource
 {
     protected static ?string $model = GetInTouch::class;
+    protected static ?string $navigationGroup = 'General Management';
 
     protected static ?string $navigationIcon = 'heroicon-o-envelope';
 

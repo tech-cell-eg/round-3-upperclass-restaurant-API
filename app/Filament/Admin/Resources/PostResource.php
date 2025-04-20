@@ -17,6 +17,7 @@ use Filament\Forms\Components\DatePicker;
 class PostResource extends Resource
 {
     protected static ?string $model = Post::class;
+    protected static ?string $navigationGroup = 'General Management';
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 

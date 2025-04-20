@@ -18,7 +18,7 @@ use Filament\Forms\Components\DatePicker;
 class CookingClassResource extends Resource
 {
     protected static ?string $model = CookingClass::class;
-
+    protected static ?string $navigationGroup = 'Classes and Workshop Management';
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
     public static function form(Form $form): Form

@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class GiftCardDetailResource extends Resource
 {
     protected static ?string $model = GiftCardDetail::class;
-
+    protected static ?string $navigationGroup = 'Gift Card Management';
     protected static ?string $navigationIcon = 'heroicon-o-gift';
 
     public static function form(Form $form): Form
